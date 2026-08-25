@@ -1,0 +1,237 @@
+/* ===========================
+   Base Navbar
+=========================== */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+
+  padding: 0 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+  transition: all 0.35s ease;
+}
+
+/* ===========================
+   Homepage
+=========================== */
+
+.homeNavbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.homeNavbar .logo,
+.homeNavbar .navLinks a {
+  color: white;
+}
+
+.homeNavbar .active::after {
+  background: white;
+}
+
+.homeNavbar .contactBtn {
+  background: white;
+  color: #2B170F;
+}
+
+/* ===========================
+   Inner Pages
+=========================== */
+
+.pageNavbar {
+  position: sticky;
+  top: 0;
+
+  background: rgba(248, 245, 242, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(43, 23, 15, 0.08);
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.pageNavbar .logo,
+.pageNavbar .navLinks a {
+  color: #2B170F;
+}
+
+.pageNavbar .active::after {
+  background: #8A5A3C;
+}
+
+.pageNavbar .contactBtn {
+  background: #2B170F;
+  color: white;
+}
+
+.pageNavbar .contactBtn:hover {
+  background: #8A5A3C;
+}
+
+
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 42px; /* Try 40px–48px depending on your logo */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  position: relative;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.navLinks a:hover {
+  opacity: 0.75;
+}
+
+.active {
+  font-weight: 600;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 100%;
+  height: 2px;
+
+  background: currentColor;
+  border-radius: 999px;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.contactBtn {
+  padding: 0.65rem 1.35rem;
+
+  border: none;
+  border-radius: 999px;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 2rem;
+    height: 60px;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+
+  .navLinks {
+    gap: 1.5rem;
+  }
+
+  .contactBtn {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  .logo img {
+    height: 34px;
+  }
+
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .navLinks a {
+    font-size: 0.85rem;
+  }
+}
+/* ===========================
+   Mobile Menu Button
+=========================== */
+
+.menuBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .navLinks,
+  .contactBtn {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar {
+    padding: 0 1.5rem;
+  }
+}

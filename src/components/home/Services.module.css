@@ -1,0 +1,233 @@
+.servicesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Exact 50/50 split layout */
+  background-color: #e5dacd; /* Matches the warm beige background */
+}
+
+/* Left side setup */
+.leftSide {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ensures the image container stretches perfectly to match the height of the text column */
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right side content setup */
+.rightSide {
+  /* Tightened padding to compact the section height */
+  padding: 5rem 6rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically if the image happens to be taller */
+}
+
+.headerContent {
+  margin-bottom: 2.5rem; /* Reduced space below the main heading */
+  max-width: 500px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 300;
+  color: #1a1010;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.title span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a3f35;
+}
+
+/* Vertical list structure */
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.serviceItem {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.75rem 0; /* Reduced vertical cell padding for tighter design */
+  border-top: 1px solid rgba(26, 16, 16, 0.15); /* Separator line */
+  align-items: flex-start;
+}
+
+/* Make last item borders tidy */
+.servicesList > .serviceItem:last-child {
+  border-bottom: 1px solid rgba(26, 16, 16, 0.15);
+}
+
+/* Circle Icon Styles */
+.iconCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #1a1010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.itemText h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1a1010;
+  margin-bottom: 0.5rem;
+}
+
+.itemText p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #61554a;
+  max-width: 520px;
+}
+
+/* Active State Styles (The dark filled first item variant) */
+.activeItem .iconCircle {
+  background: #1a1010;
+  color: white;
+}
+
+.activeItem .itemText h3 {
+  font-weight: 600;
+}
+
+/* Responsiveness */
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 968px) {
+  .servicesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .leftSide {
+    height: 50vh;
+  }
+
+  .bgImage {
+    height: 100%;
+  }
+
+  .rightSide {
+    padding: 4rem 2rem;
+  }
+
+  .headerContent {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .leftSide {
+    height: 320px;
+  }
+
+  .rightSide {
+    padding: 3rem 1.5rem;
+  }
+
+  .headerContent {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .serviceItem {
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .iconCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .itemText h3 {
+    font-size: 1.05rem;
+  }
+
+  .itemText p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+  .leftSide {
+    height: 260px;
+  }
+
+  .rightSide {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .serviceItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .iconCircle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .itemText h3 {
+    font-size: 1rem;
+  }
+
+  .itemText p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+}

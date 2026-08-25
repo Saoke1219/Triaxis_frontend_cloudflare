@@ -1,0 +1,253 @@
+.cta {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6rem 2rem;
+
+  background:
+    linear-gradient(
+      rgba(26, 16, 16, 0.45),
+      rgba(26, 16, 16, 0.6)
+    ),
+    url("/cta.jpg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  text-align: center;
+
+  color: white;
+
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.2;
+
+  margin-bottom: 2.5rem;
+
+  letter-spacing: -1px;
+}
+
+.content h2 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ===========================
+   CTA Button
+=========================== */
+
+.ctaButton {
+  background: #ffffff;
+  color: #1a1010;
+
+  border: none;
+
+  padding: 0.9rem 2.2rem;
+
+  border-radius: 999px;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #f7f5f2;
+
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Trust Signal
+=========================== */
+
+.trustSignal {
+  position: relative;
+
+  max-width: 620px;
+
+  margin: 4rem auto 0;
+  padding: 1.5rem 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trustSignal p {
+  margin: 0;
+
+  max-width: 500px;
+
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.7;
+
+  letter-spacing: 0.02em;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Opening quotation mark */
+
+.quoteOpen {
+  position: absolute;
+
+  left: 0;
+  top: -1rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.22);
+
+  pointer-events: none;
+}
+
+/* Closing quotation mark */
+
+.quoteClose {
+  position: absolute;
+
+  right: 0;
+  bottom: -2.5rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.22);
+
+  pointer-events: none;
+}
+
+/* ===========================
+   Tablet / Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .cta {
+    min-height: 60vh;
+
+    padding: 5rem 1.5rem;
+
+    background:
+      linear-gradient(
+        rgba(26, 16, 16, 0.6),
+        rgba(26, 16, 16, 0.75)
+      ),
+      url("/cta.jpg");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content {
+    max-width: 100%;
+
+    padding: 0 0.5rem;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+
+    margin-bottom: 2rem;
+  }
+
+  .ctaButton {
+    padding: 0.85rem 1.8rem;
+
+    font-size: 0.95rem;
+  }
+
+  .trustSignal {
+    max-width: 500px;
+
+    margin-top: 3.5rem;
+
+    padding: 1.5rem 3rem;
+  }
+
+  .trustSignal p {
+    font-size: 0.95rem;
+  }
+
+  .quoteOpen,
+  .quoteClose {
+    font-size: 5rem;
+  }
+
+  .quoteOpen {
+    left: 0;
+  }
+
+  .quoteClose {
+    right: 0;
+    bottom: -1.8rem;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .content h2 {
+    font-size: 1.8rem;
+  }
+
+  .trustSignal {
+    margin-top: 3rem;
+
+    padding: 1.5rem 2.25rem;
+  }
+
+  .trustSignal p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .quoteOpen,
+  .quoteClose {
+    font-size: 4rem;
+  }
+
+  .quoteOpen {
+    top: -0.5rem;
+    left: -0.25rem;
+  }
+
+  .quoteClose {
+    right: -0.25rem;
+    bottom: -1.25rem;
+  }
+}

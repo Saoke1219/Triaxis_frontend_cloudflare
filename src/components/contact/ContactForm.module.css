@@ -1,0 +1,465 @@
+.section {
+    padding: 90px 8%;
+    background: #F8F5F2;
+  }
+  
+  .wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 60px;
+    align-items: start;
+  }
+  
+  /* ---------- Intro ---------- */
+  
+  .intro {
+    position: sticky;
+    top: 100px;
+  }
+  
+  .eyebrow {
+    display: inline-block;
+    color: #8A5A3C;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .intro h2 {
+    font-size: clamp(2rem, 3.5vw, 2.7rem);
+    line-height: 1.15;
+    font-weight: 300;
+    color: #2B170F;
+    margin-bottom: 16px;
+  }
+  
+  .intro p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5E544D;
+  }
+  
+  /* ---------- Card ---------- */
+  
+  .formCard {
+    background: white;
+    border: 1px solid #E7DCD1;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 24px 60px rgba(43, 23, 15, .08);
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* ---------- Fields ---------- */
+  
+  .field {
+    margin-bottom: 22px;
+  }
+  
+  .floatingWrap {
+    position: relative;
+  }
+  
+  .input,
+  .textarea,
+  .select {
+    width: 100%;
+    border: 1px solid #D7C7B7;
+    border-radius: 10px;
+    padding: 16px 14px;
+    font-size: 0.95rem;
+    color: #2B170F;
+    background: #FDFBF9;
+    transition: border-color .25s ease, box-shadow .25s ease;
+    font-family: inherit;
+  }
+  
+  .textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .input:focus,
+  .textarea:focus,
+  .select:focus {
+    outline: none;
+    border-color: #8A5A3C;
+    box-shadow: 0 0 0 3px rgba(138, 90, 60, .12);
+  }
+  
+  .floatingLabel {
+    position: absolute;
+    left: 14px;
+    top: 16px;
+    font-size: 0.95rem;
+    color: #8C7C6E;
+    pointer-events: none;
+    transition: all .2s ease;
+    background: transparent;
+    padding: 0 4px;
+  }
+  
+  .input:focus + .floatingLabel,
+  .input:not(:placeholder-shown) + .floatingLabel,
+  .textarea:focus + .floatingLabel,
+  .textarea:not(:placeholder-shown) + .floatingLabel {
+    top: -9px;
+    left: 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #8A5A3C;
+    background: white;
+  }
+  
+  .staticLabel {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6C584A;
+    margin-bottom: 8px;
+  }
+  
+  .checkMark {
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    color: #6E9C6B;
+    font-weight: 700;
+  }
+  
+  .fieldError .input,
+  .fieldError .textarea,
+  .fieldError .select {
+    border-color: #C0554A;
+  }
+  
+  .errorText {
+    display: block;
+    color: #C0554A;
+    font-size: 0.8rem;
+    margin-top: 6px;
+    overflow: hidden;
+  }
+  
+  /* ---------- Honeypot (hidden from real users) ---------- */
+  
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  /* ---------- Submit ---------- */
+  
+  .submit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #8A5A3C;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+  
+  .submit:hover:not(:disabled) {
+    background: #A66D44;
+    transform: translateY(-2px);
+  }
+  
+  .submit:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,.4);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .privacyNote {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #9C8C7E;
+    margin-top: 16px;
+  }
+  
+  .serverError {
+    background: #FBEAE8;
+    border: 1px solid #E3B4AC;
+    color: #9C3B30;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+  
+  /* ---------- Success state ---------- */
+  
+  .successState {
+    text-align: center;
+    padding: 40px 10px;
+  }
+  
+  .successIcon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #EAF2E9;
+    color: #4C7A48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+  }
+  
+  .successState h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2B170F;
+    margin-bottom: 10px;
+  }
+  
+  .successState p {
+    color: #5E544D;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto 24px;
+  }
+  
+  .resetButton {
+    background: transparent;
+    border: 1px solid #D7C7B7;
+    color: #6C584A;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+  }
+  
+  .resetButton:hover {
+    border-color: #8A5A3C;
+    color: #8A5A3C;
+  }
+  
+  /* ---------- Responsive ---------- */
+  
+  /* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+  .section {
+    padding: 75px 7%;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro {
+    position: static;
+  }
+
+  .intro h2 {
+    font-size: 2.3rem;
+  }
+
+  .formCard {
+    padding: 34px 30px;
+  }
+
+  .row {
+    gap: 18px;
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .wrapper {
+    gap: 32px;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 1.8px;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .intro p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .formCard {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .field {
+    margin-bottom: 18px;
+  }
+
+  .input,
+  .textarea,
+  .select {
+    padding: 15px 14px;
+    font-size: 0.95rem;
+  }
+
+  .floatingLabel {
+    font-size: 0.9rem;
+    top: 15px;
+  }
+
+  .submit {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+
+  .privacyNote {
+    font-size: 0.75rem;
+  }
+
+  .successState {
+    padding: 30px 5px;
+  }
+
+  .successIcon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+  }
+
+  .successState h3 {
+    font-size: 1.35rem;
+  }
+
+  .successState p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  .intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+  }
+
+  .formCard {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .input,
+  .textarea,
+  .select {
+    padding: 14px 12px;
+    font-size: 0.9rem;
+  }
+
+  .textarea {
+    min-height: 110px;
+  }
+
+  .floatingLabel {
+    left: 12px;
+    top: 14px;
+    font-size: 0.85rem;
+  }
+
+  .input:focus + .floatingLabel,
+  .input:not(:placeholder-shown) + .floatingLabel,
+  .textarea:focus + .floatingLabel,
+  .textarea:not(:placeholder-shown) + .floatingLabel {
+    left: 8px;
+    font-size: 0.68rem;
+  }
+
+  .submit {
+    padding: 14px 18px;
+    font-size: 0.88rem;
+  }
+
+  .privacyNote {
+    font-size: 0.72rem;
+  }
+
+  .successIcon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+
+  .successState h3 {
+    font-size: 1.2rem;
+  }
+
+  .successState p {
+    font-size: 0.9rem;
+  }
+
+  .resetButton {
+    width: 100%;
+  }
+}

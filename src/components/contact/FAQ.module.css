@@ -1,0 +1,195 @@
+.section {
+    padding: 90px 8%;
+    background: white;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header span {
+    display: inline-block;
+    color: #8A5A3C;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .header h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 300;
+    color: #2B170F;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item {
+    border-bottom: 1px solid #E7DCD1;
+  }
+  
+  .question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 22px 4px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #2B170F;
+    cursor: pointer;
+  }
+  
+  .icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #D7C7B7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #8A5A3C;
+    transition: transform .3s ease, background .3s ease, color .3s ease;
+  }
+  
+  .iconOpen {
+    transform: rotate(45deg);
+    background: #8A5A3C;
+    color: white;
+  }
+  
+  .answerWrap {
+    overflow: hidden;
+  }
+  
+  .answer {
+    padding: 0 4px 22px;
+    color: #5E544D;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    max-width: 640px;
+  }
+  
+ /* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+  .section {
+    padding: 75px 7%;
+    max-width: 100%;
+  }
+
+  .header {
+    margin-bottom: 36px;
+  }
+
+  .header h2 {
+    font-size: 2.3rem;
+  }
+
+  .question {
+    font-size: 1rem;
+    padding: 20px 4px;
+  }
+
+  .answer {
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .header span {
+    font-size: 0.75rem;
+    letter-spacing: 1.8px;
+  }
+
+  .header h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .question {
+    padding: 18px 0;
+    gap: 14px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+  }
+
+  .answer {
+    padding: 0 0 20px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  .header {
+    margin-bottom: 26px;
+  }
+
+  .header h2 {
+    font-size: 1.8rem;
+  }
+
+  .question {
+    font-size: 0.9rem;
+    padding: 16px 0;
+    gap: 12px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+  }
+
+  .answer {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    padding-bottom: 18px;
+  }
+}

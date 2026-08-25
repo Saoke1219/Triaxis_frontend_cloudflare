@@ -1,0 +1,375 @@
+.hero {
+    position: relative;
+    min-height: 82vh; /* Reduced from 100vh */
+  
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(20,13,10,.45),
+        rgba(20,13,10,.72),
+        #1A1010
+      ),
+      url("/group_training.png");
+  
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .overlay {
+    width: 100%;
+    padding: 5rem 8% 4rem; /* Less vertical padding */
+    position: relative;
+    z-index: 2;
+  }
+  
+  .content {
+    max-width: 680px;
+    color: white;
+  }
+  
+  .tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: rgba(216,177,140,.9);
+  }
+  
+  .content h1 {
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+  }
+  
+  .content p {
+    max-width: 560px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #E5DDD8;
+    margin-bottom: 36px;
+  }
+  
+  .scrambleContainer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 36px;
+  }
+  
+  .label {
+    font-size: .75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #B08B69;
+  }
+  
+  .scramble {
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 500;
+    color: white;
+    min-height: 32px;
+  }
+  
+  /* Buttons */
+  
+  .actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  
+  .primary {
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+  
+  .primary {
+    background: #8A5A3C;
+    color: white;
+    border: none;
+  }
+  
+  .primary:hover {
+    background: #A66D44;
+    transform: translateY(-3px);
+  }
+  
+  
+  
+ 
+  
+  /* ---------- Floating Bubble 1 ---------- */
+
+.floatingCircle {
+    position: absolute;
+    top: -90px;
+    right: -100px;
+  
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+  
+    background: radial-gradient(
+      circle,
+      rgba(255,255,255,0.08) 0%,
+      rgba(255,255,255,0.03) 60%,
+      transparent 100%
+    );
+  
+    filter: blur(2px);
+  
+    pointer-events: none;
+    z-index: 1;
+  
+    animation: floatOne 9s ease-in-out infinite;
+  }
+  
+  /* ---------- Floating Bubble 2 ---------- */
+  
+  .floatingCircle2 {
+    position: absolute;
+    right: 10%;
+    bottom: 80px;
+  
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(2px);
+  
+    pointer-events: none;
+    z-index: 1;
+  
+    animation: floatTwo 7s ease-in-out infinite;
+  }
+  /* ---------- Animations ---------- */
+
+@keyframes floatOne {
+    0% {
+      transform: translate3d(0,0,0) scale(1);
+    }
+  
+    25% {
+      transform: translate3d(-20px,25px,0) scale(1.05);
+    }
+  
+    50% {
+      transform: translate3d(-45px,10px,0) scale(0.98);
+    }
+  
+    75% {
+      transform: translate3d(-20px,-15px,0) scale(1.03);
+    }
+  
+    100% {
+      transform: translate3d(0,0,0) scale(1);
+    }
+  }
+  
+  @keyframes floatTwo {
+    0% {
+      transform: translate3d(0,0,0);
+    }
+  
+    25% {
+      transform: translate3d(18px,-18px,0);
+    }
+  
+    50% {
+      transform: translate3d(0,-35px,0);
+    }
+  
+    75% {
+      transform: translate3d(-18px,-15px,0);
+    }
+  
+    100% {
+      transform: translate3d(0,0,0);
+    }
+  }
+  
+  /* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: 72vh;
+    background-position: center;
+  }
+
+  .overlay {
+    padding: 5rem 2.5rem 4rem;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 3.2rem;
+  }
+
+  .content p {
+    max-width: 100%;
+  }
+
+  .floatingCircle {
+    width: 240px;
+    height: 240px;
+    top: -70px;
+    right: -80px;
+  }
+
+  .floatingCircle2 {
+    width: 140px;
+    height: 140px;
+    bottom: 60px;
+    right: 8%;
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 65vh;
+    background-position: center center;
+  }
+
+  .overlay {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .content h1 {
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .scrambleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .label {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  .scramble {
+    font-size: 1.1rem;
+    min-height: auto;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .primary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Decorative circles */
+
+  .floatingCircle {
+    width: 170px;
+    height: 170px;
+    top: -40px;
+    right: -60px;
+    opacity: 0.45;
+  }
+
+  .floatingCircle2 {
+    width: 100px;
+    height: 100px;
+    right: -20px;
+    bottom: 40px;
+    opacity: 0.35;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .overlay {
+    padding: 5.5rem 1.25rem 2.5rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .scramble {
+    font-size: 1rem;
+  }
+
+  .primary {
+    font-size: 0.85rem;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .floatingCircle {
+    width: 130px;
+    height: 130px;
+    top: -30px;
+    right: -45px;
+  }
+
+  .floatingCircle2 {
+    width: 80px;
+    height: 80px;
+    bottom: 25px;
+    right: -15px;
+  }
+}

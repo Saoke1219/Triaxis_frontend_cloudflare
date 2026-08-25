@@ -1,0 +1,295 @@
+.footerContainer {
+  background-color: #dfd5c6; /* Matches the clean warm beige background */
+  padding: 6rem 6rem 2rem 6rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2; /* Keeps items selectable above background typography */
+}
+
+/* Brand styling left side */
+.brandCol {
+  max-width: 320px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.logoIcon {
+  width: 220px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brandName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1010;
+}
+
+.brandDesc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a3f35;
+}
+
+/* Nav links structural setup */
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 4rem;
+}
+
+.linkCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkCol h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #706559;
+  text-transform: none;
+  margin-bottom: 1.2rem;
+}
+
+.linkCol a {
+  font-size: 0.95rem;
+  color: #1a1010;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: opacity 0.2s ease;
+}
+
+.linkCol a:hover {
+  opacity: 0.7;
+}
+
+/* Divider Line */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(26, 16, 16, 0.1);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Bottom Legal Strip */
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  font-size: 0.85rem;
+  color: #4a3f35;
+  padding-bottom: 1rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legalLinks a {
+  color: #4a3f35;
+  text-decoration: none;
+}
+
+.legalLinks a:hover {
+  color: #1a1010;
+}
+
+.copyright {
+  margin: 0;
+}
+
+.watermarkText {
+  position: absolute;
+  bottom: -4rem; /* Keeps it overlapping the bottom edge slightly */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the element perfectly regardless of window width */
+  font-size: clamp(8rem, 18vw, 22rem);
+  font-weight: 700;
+  letter-spacing: -6px;
+  color: rgba(26, 16, 16, 0.045);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  line-height: 1;
+  white-space: nowrap; /* Prevents the text from breaking into two lines on smaller screens */
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 868px) {
+  .footerContainer {
+    padding: 4rem 2rem 2rem;
+  }
+
+  .topSection {
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .brandCol {
+    max-width: 100%;
+  }
+
+  .linksGrid {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .watermarkText {
+    bottom: -2rem;
+    font-size: clamp(6rem, 18vw, 12rem);
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .footerContainer {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .topSection {
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Center the entire brand section */
+  .brandCol {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Center the logo container */
+  .logoRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Center the logo image */
+  .logoIcon {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .brandDesc {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .linksGrid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .legalLinks {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .watermarkText {
+    font-size: clamp(5rem, 22vw, 9rem);
+    bottom: -1rem;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 3rem 1.25rem 1.5rem;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .linkCol {
+    align-items: center;
+  }
+
+  @media (max-width: 480px) {
+    .logoRow {
+      justify-content: center;
+    }
+  
+    .logoIcon {
+      width: 150px;
+      margin: 0 auto;
+    }
+  }
+
+  .brandDesc {
+    font-size: 0.9rem;
+  }
+
+  .legalLinks {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .watermarkText {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+    bottom: -0.5rem;
+  }
+}

@@ -1,0 +1,257 @@
+.section {
+    background: #F8F5F2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    padding: 75px 8%;
+  }
+  
+  /* LEFT */
+  
+  .left {
+    max-width: 560px;
+  }
+  
+  .tag {
+    color: #8A5A3C;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  
+  .line {
+    width: 55px;
+    height: 2px;
+    background: #8A5A3C;
+    margin: 18px 0 24px;
+  }
+  
+  .left h2 {
+    font-size: clamp(2.8rem, 4vw, 4rem);
+    line-height: 1.05;
+    color: #2B170F;
+    margin-bottom: 24px;
+  }
+  
+  .left p {
+    color: #555;
+    line-height: 1.75;
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+  
+  .left strong {
+    color: #2B170F;
+  }
+  
+  .signature {
+    margin-top: 32px;
+  }
+  
+  .signature h3 {
+    font-size: 1.7rem;
+    color: #8A5A3C;
+    font-family: cursive;
+    margin-bottom: 6px;
+  }
+  
+  .signature span {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  /* RIGHT */
+  
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+  }
+  
+  .image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  
+    border-radius: 15px 150px 15px 150px;
+  
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.16);
+  }
+  
+  .storyBtn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  
+    padding: 14px 26px;
+  
+    border: none;
+    border-radius: 999px;
+  
+    background: white;
+    color: #2B170F;
+  
+    font-size: 0.9rem;
+    font-weight: 600;
+  
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .storyBtn:hover {
+    background: #3B2415;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  /* ---------- Tablet ---------- */
+  
+  @media (max-width: 992px) {
+    .section {
+      grid-template-columns: 1fr;
+      gap: 45px;
+      padding: 65px 8%;
+    }
+  
+    .left {
+      order: 2;
+      max-width: 100%;
+    }
+  
+    .right {
+      order: 1;
+    }
+  
+    .imageContainer {
+      max-width: 480px;
+    }
+  
+    .image {
+      height: 540px;
+    }
+  
+    .left h2 {
+      font-size: 3rem;
+    }
+  }
+  
+  /* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+
+  .left {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .right {
+    order: 1;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .line {
+    margin: 1rem auto 1.5rem;
+  }
+
+  .left h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+
+  .left p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .signature {
+    margin-top: 2rem;
+  }
+
+  .signature h3 {
+    font-size: 1.5rem;
+  }
+
+  .signature span {
+    font-size: 0.9rem;
+  }
+
+  .imageContainer {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 100%;
+    height: 420px;
+    border-radius: 18px 90px 18px 90px;
+  }
+
+  .storyBtn {
+    right: 16px;
+    bottom: 16px;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3.5rem 1.25rem;
+    gap: 2rem;
+  }
+
+  .left h2 {
+    font-size: 1.75rem;
+  }
+
+  .left p {
+    font-size: 0.9rem;
+  }
+
+  .imageContainer {
+    max-width: 300px;
+  }
+
+  .image {
+    height: 360px;
+    border-radius: 14px 70px 14px 70px;
+  }
+
+  .storyBtn {
+    right: 12px;
+    bottom: 12px;
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .signature h3 {
+    font-size: 1.35rem;
+  }
+
+  .signature span {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,338 @@
+.section {
+    background: #2b170f;
+    padding: 140px 8%;
+    position: relative;
+    color: white;
+  }
+  
+  .section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 80px;
+  }
+  
+  /* Timeline Line */
+  
+  .line {
+    position: absolute;
+    left: 50%;
+    top: 260px;
+    bottom: 120px;
+    width: 2px;
+    background: #8a5a3c;
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline Items */
+  
+  .item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 80px;
+  }
+  
+  .left {
+    padding-right: 80px;
+  }
+  
+  .right {
+    margin-left: 50%;
+    padding-left: 80px;
+  }
+  
+  /* Timeline Circle */
+  
+  .circle {
+    position: absolute;
+    top: 30px;
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    background: #c89c74;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .right .circle {
+    left: -9px;
+  }
+  
+  /* Timeline Card */
+  
+  .content {
+    background: #3b2415;
+    padding: 32px;
+    border-radius: 18px;
+    transition: all 0.35s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  }
+  
+  .content:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Year */
+  
+  .year {
+    display: inline-block;
+    color: #c89c74;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  /* Career Milestone */
+  
+  .content h3 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  /* Job Title */
+  
+  .content h4 {
+    color: #e5d3c2;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  /* Organization */
+  
+  .company {
+    display: block;
+    color: #b68a67;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 18px;
+  }
+  
+  /* Description */
+  
+  .content p {
+    color: #d6d6d6;
+    line-height: 1.75;
+    font-size: 0.95rem;
+  }
+  
+  /* ---------- Responsive ---------- */
+  
+  @media (max-width: 992px) {
+  
+    .line {
+      left: 24px;
+      top: 180px;
+      bottom: 0;
+      transform: none;
+    }
+  
+    .item {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 70px;
+      padding-right: 0;
+      margin-bottom: 50px;
+    }
+  
+    .left,
+    .right {
+      margin-left: 0;
+      padding-left: 70px;
+      padding-right: 0;
+    }
+  
+    .circle,
+    .right .circle {
+      left: 15px;
+      right: auto;
+    }
+  
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .section {
+      padding: 90px 6%;
+    }
+  
+    .section h2 {
+      font-size: 2rem;
+    }
+  
+    .content {
+      padding: 24px;
+    }
+  
+    .content h3 {
+      font-size: 1.35rem;
+    }
+  
+    .content p {
+      font-size: 0.9rem;
+    }
+  }
+  /* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+  .section {
+    padding: 6rem 2.5rem;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .line {
+    left: 24px;
+    top: 180px;
+    bottom: 0;
+    transform: none;
+  }
+
+  .item {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+
+  .left,
+  .right {
+    margin-left: 0;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+
+  .circle,
+  .right .circle {
+    left: 15px;
+    right: auto;
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+  }
+
+  .line {
+    left: 18px;
+    top: 150px;
+  }
+
+  .item {
+    padding-left: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .left,
+  .right {
+    padding-left: 3rem;
+  }
+
+  .circle,
+  .right .circle {
+    left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .content {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .year {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .content h3 {
+    font-size: 1.3rem;
+  }
+
+  .content h4 {
+    font-size: 0.95rem;
+  }
+
+  .company {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .section h2 {
+    font-size: 1.75rem;
+  }
+
+  .line {
+    left: 16px;
+    top: 135px;
+  }
+
+  .item,
+  .left,
+  .right {
+    padding-left: 2.5rem;
+  }
+
+  .circle,
+  .right .circle {
+    left: 8px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .content {
+    padding: 1.25rem;
+  }
+
+  .content h3 {
+    font-size: 1.15rem;
+  }
+
+  .content h4 {
+    font-size: 0.9rem;
+  }
+
+  .content p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,1240 @@
+.page {
+  background: #f8f5f2;
+  color: #2b170f;
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero {
+  padding: 10rem 8% 8rem;
+
+  background: #1a1010;
+
+  color: white;
+}
+
+.heroInner {
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+.backButton {
+  margin-bottom: 5rem;
+
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.85rem;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: white;
+}
+
+.heroMeta {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.heroMeta span:first-child {
+  color: #c49a7a;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 0.14em;
+}
+
+.heroMeta span:last-child {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 1100px;
+
+  margin: 0 0 2rem;
+
+  font-size: clamp(3.3rem, 6vw, 6.5rem);
+  font-weight: 300;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+
+  text-wrap: balance;
+}
+
+.heroIntro {
+  max-width: 720px;
+
+  margin-bottom: 5rem;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 1.08rem;
+
+  line-height: 1.8;
+}
+
+/* ===========================
+   Hero Metrics
+=========================== */
+
+.heroMetrics {
+  display: flex;
+
+  gap: 6rem;
+
+  padding-top: 2.5rem;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.15);
+}
+
+.heroMetrics div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.6rem;
+}
+
+.heroMetrics strong {
+  color: #d7b398;
+
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-weight: 300;
+}
+
+.heroMetrics span {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 0.8rem;
+}
+
+/* ===========================
+   Main Image
+=========================== */
+
+.imageSection {
+  padding: 0 8%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #1a1010 50%,
+      #f8f5f2 50%
+    );
+}
+
+.imageWrapper {
+  max-width: 1300px;
+
+  height: 650px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ===========================
+   Overview
+=========================== */
+
+.overviewSection {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 9rem 2rem;
+
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+
+  gap: 8rem;
+}
+
+.overviewMeta span {
+  display: block;
+
+  margin-bottom: 0.75rem;
+
+  color: #8a5a3c;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.overviewMeta p {
+  color: #6c584a;
+
+  line-height: 1.6;
+}
+
+.sectionNumber {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: #a78a72;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.14em;
+}
+
+.overviewContent h2 {
+  margin-bottom: 2rem;
+
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 300;
+
+  letter-spacing: -0.035em;
+}
+
+.overviewContent p {
+  color: #62564f;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+}
+
+/* ===========================
+   Story Sections
+=========================== */
+
+.storySection {
+  padding: 8rem 8%;
+
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+
+  gap: 7rem;
+
+  border-top: 1px solid #ded2c8;
+}
+
+.altSection {
+  background: #efe6dc;
+}
+
+.storyLabel span {
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: #8a5a3c;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.14em;
+}
+
+.storyLabel p {
+  color: #6c584a;
+
+  font-size: 0.85rem;
+}
+
+.storyContent {
+  max-width: 850px;
+}
+
+.storyContent h2 {
+  margin: 0 0 2rem;
+
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-weight: 300;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+}
+
+.storyContent > p {
+  color: #62564f;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+}
+
+/* ===========================
+   Results
+=========================== */
+
+.resultsSection {
+  padding: 8rem 8%;
+
+  background: #fcfaf8;
+}
+
+.resultsInner {
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+.resultsHeader {
+  max-width: 850px;
+
+  margin-bottom: 4.5rem;
+}
+
+.resultsHeader > span {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: #8a5a3c;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.resultsHeader h2 {
+  margin: 0 0 1.5rem;
+
+  color: #2b170f;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 300;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+}
+
+.resultsHeader p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #6c584a;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 2.5rem;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.resultItem {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 1rem;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.resultItem:hover {
+  background: #faf7f4;
+
+  transform: translateY(-6px);
+}
+
+/* ===========================
+   Icon
+=========================== */
+
+.resultIcon {
+  width: 58px;
+  height: 58px;
+
+  margin-bottom: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #faf7f4;
+
+  border: 1px solid #ded2c8;
+  border-radius: 10px;
+
+  color: #8a5a3c;
+
+  box-shadow:
+    0 8px 24px rgba(43, 23, 15, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.resultItem:hover .resultIcon {
+  transform: translateY(-3px);
+
+  background: #8a5a3c;
+
+  color: #ffffff;
+
+  border-color: #8a5a3c;
+
+  box-shadow:
+    0 14px 28px rgba(43, 23, 15, 0.18);
+}
+
+/* ===========================
+   Typography
+=========================== */
+
+.resultItem h3 {
+  margin: 0 0 0.65rem;
+
+  color: #2b170f;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.015em;
+}
+
+.resultItem p {
+  margin: 0;
+
+  color: #6c584a;
+
+  font-size: 0.94rem;
+
+  line-height: 1.65;
+}
+
+/* ===========================
+   Impact
+=========================== */
+
+.impactSection {
+  padding: 10rem 8%;
+
+  background: #8a5a3c;
+
+  color: white;
+}
+
+.impactSection > span {
+  display: block;
+
+  max-width: 1100px;
+
+  margin: 0 auto 3rem;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.impactSection blockquote {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  font-size: clamp(2.4rem, 4.5vw, 4.7rem);
+  font-weight: 300;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.035em;
+}
+
+/* ===========================
+   Automation
+=========================== */
+
+.automationOuter {
+  padding: 8rem 6%;
+
+  background: #f8f5f2;
+}
+
+.automationSection {
+  max-width: 1350px;
+
+  margin: 0 auto;
+
+  padding: 7rem 6rem;
+
+  background: #1a1010;
+
+  color: white;
+
+  border-radius: 28px;
+}
+
+.automationTop {
+  max-width: 900px;
+
+  margin-bottom: 3rem;
+}
+
+.automationTop > span {
+  display: block;
+
+  margin-bottom: 1.2rem;
+
+  color: #c49a7a;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.automationTop h2 {
+  margin: 0 0 2rem;
+
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 300;
+
+  line-height: 1.04;
+
+  letter-spacing: -0.045em;
+}
+
+.automationIntro {
+  max-width: 750px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+.automationDescription {
+  max-width: 850px;
+
+  margin-bottom: 5rem;
+}
+
+.automationDescription p {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.98rem;
+
+  line-height: 1.9;
+}
+
+/* ===========================
+   Automation Flow
+=========================== */
+
+.automationFlow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1rem;
+
+  margin-bottom: 5rem;
+}
+
+.flowCard {
+  min-height: 280px;
+
+  position: relative;
+
+  padding: 1.8rem;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.14);
+
+  border-radius: 16px;
+}
+
+.flowNumber {
+  display: block;
+
+  margin-bottom: 4rem;
+
+  color: #c49a7a;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.14em;
+}
+
+.flowCard h3 {
+  margin-bottom: 1rem;
+
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.flowCard p {
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.88rem;
+
+  line-height: 1.7;
+}
+
+.arrow {
+  position: absolute;
+
+  right: -1.4rem;
+  top: 50%;
+
+  z-index: 5;
+
+  color: #c49a7a;
+
+  font-size: 1.5rem;
+}
+
+/* ===========================
+   Transformation
+=========================== */
+
+.transformation {
+  padding-top: 3rem;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.14);
+}
+
+.transformation > span {
+  display: block;
+
+  margin-bottom: 2rem;
+
+  color: #c49a7a;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.transformationFlow {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+}
+
+.transformationFlow strong {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.transformationFlow span {
+  color: #c49a7a;
+}
+
+/* ===========================
+   Related Studies
+=========================== */
+
+.relatedSection {
+  padding: 9rem 8%;
+}
+
+.relatedHeader {
+  margin-bottom: 4rem;
+}
+
+.relatedHeader span {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: #8a5a3c;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.relatedHeader h2 {
+  margin: 0;
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 300;
+
+  letter-spacing: -0.04em;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem;
+}
+
+.relatedCard {
+  min-height: 380px;
+
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+
+  border: 1px solid #ded2c8;
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.relatedCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 50px rgba(43, 23, 15, 0.1);
+}
+
+.relatedCard > span {
+  margin-bottom: 2rem;
+
+  color: #8a5a3c;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.relatedCard h3 {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 2rem;
+  font-weight: 300;
+
+  line-height: 1.2;
+}
+
+.relatedCard button {
+  width: fit-content;
+
+  margin-top: auto;
+
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  color: #2b170f;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.cta {
+  padding: 10rem 2rem;
+
+  background: #2b170f;
+
+  color: white;
+
+  text-align: center;
+}
+
+.cta > span {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  color: #c49a7a;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.cta h2 {
+  max-width: 900px;
+
+  margin: 0 auto 3rem;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 300;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.04em;
+}
+
+.cta button,
+.notFound button {
+  padding: 1rem 2rem;
+
+  background: white;
+
+  border: none;
+  border-radius: 999px;
+
+  color: #2b170f;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* ===========================
+   Not Found
+=========================== */
+
+.notFound {
+  min-height: 100vh;
+
+  padding: 8rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #1a1010;
+
+  color: white;
+
+  text-align: center;
+}
+
+.notFound span {
+  color: #c49a7a;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+
+  font-size: 0.75rem;
+}
+
+.notFound h1 {
+  max-width: 700px;
+
+  margin: 2rem 0;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  font-weight: 300;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+  .hero {
+    padding:
+      9rem 6%
+      6rem;
+  }
+
+  .imageSection {
+    padding: 0 6%;
+  }
+
+  .imageWrapper {
+    height: 500px;
+  }
+
+  .overviewSection {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .storySection {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    padding: 6rem 6%;
+  }
+
+  .automationSection {
+    padding: 5rem 3rem;
+  }
+
+  .automationFlow {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+.resultsGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 3rem 2rem;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding:
+      8rem 1.5rem
+      5rem;
+  }
+
+  .backButton {
+    margin-bottom: 3rem;
+  }
+
+  .heroMeta {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 0.7rem;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        2.6rem,
+        10vw,
+        4rem
+      );
+  }
+
+  .heroIntro {
+    font-size: 0.95rem;
+
+    margin-bottom: 3.5rem;
+  }
+
+  .heroMetrics {
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  .imageSection {
+    padding: 0 1.5rem;
+  }
+
+  .imageWrapper {
+    height: 320px;
+
+    border-radius: 16px;
+  }
+
+  .overviewSection {
+    padding:
+      6rem 1.5rem;
+  }
+
+  .storySection {
+    padding:
+      5rem 1.5rem;
+  }
+
+  .resultsSection {
+    padding: 6rem 1.5rem;
+  }
+  
+  .resultsHeader {
+    margin-bottom: 3.5rem;
+  }
+  
+  .resultsHeader h2 {
+    font-size: clamp(2.5rem, 9vw, 3.6rem);
+  }
+  
+  .resultsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  
+    gap: 3rem 1.5rem;
+  }
+  
+  .resultIcon {
+    width: 54px;
+    height: 54px;
+  
+    margin-bottom: 1.5rem;
+  }
+  
+  .resultItem h3 {
+    font-size: 1rem;
+  }
+  
+  .resultItem p {
+    font-size: 0.9rem;
+  }
+
+  .impactSection {
+    padding:
+      7rem 1.5rem;
+  }
+
+  .automationOuter {
+    padding:
+      5rem 1.5rem;
+  }
+
+  .automationSection {
+    padding:
+      3.5rem 1.5rem;
+
+    border-radius: 20px;
+  }
+
+  .automationFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .flowCard {
+    min-height: auto;
+  }
+
+  .flowNumber {
+    margin-bottom: 2rem;
+  }
+
+  .transformationFlow {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .transformationFlow span {
+    transform: rotate(90deg);
+  }
+
+  .relatedSection {
+    padding:
+      6rem 1.5rem;
+  }
+
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .relatedCard {
+    min-height: 300px;
+
+    padding: 2rem;
+  }
+
+  .cta {
+    padding:
+      7rem 1.5rem;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding:
+      7rem 1.25rem
+      4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .imageSection {
+    padding: 0 1.25rem;
+  }
+
+  .imageWrapper {
+    height: 240px;
+  }
+
+  .overviewSection {
+    padding:
+      5rem 1.25rem;
+  }
+
+  .storySection {
+    padding:
+      4.5rem 1.25rem;
+  }
+
+  .resultsSection {
+    padding: 5rem 1.25rem;
+  }
+  
+  .resultsHeader {
+    margin-bottom: 3rem;
+  }
+  
+  .resultsHeader h2 {
+    font-size: 2.35rem;
+  }
+  
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  
+    gap: 2.75rem;
+  }
+  
+  .resultItem {
+    max-width: 360px;
+  }
+  
+  .resultIcon {
+    width: 52px;
+    height: 52px;
+  
+    margin-bottom: 1.25rem;
+  }
+  
+  .resultItem h3 {
+    margin-bottom: 0.5rem;
+  
+    font-size: 1.05rem;
+  }
+  
+  .resultItem p {
+    font-size: 0.92rem;
+  
+    line-height: 1.6;
+  }
+
+  .impactSection {
+    padding:
+      6rem 1.25rem;
+  }
+
+  .impactSection blockquote {
+    font-size: 2rem;
+  }
+
+  .automationOuter {
+    padding:
+      4rem 1rem;
+  }
+
+  .automationSection {
+    padding:
+      3rem 1.25rem;
+  }
+
+  .automationTop h2 {
+    font-size: 2.5rem;
+  }
+
+  .relatedSection {
+    padding:
+      5rem 1.25rem;
+  }
+
+  .relatedCard h3 {
+    font-size: 1.7rem;
+  }
+
+  .cta {
+    padding:
+      6rem 1.25rem;
+  }
+
+  .cta h2 {
+    font-size: 2.3rem;
+  }
+}
