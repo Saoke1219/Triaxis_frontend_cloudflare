@@ -18,7 +18,7 @@ const timeline = [
   },
 
   {
-    year: "2021",
+    year: "2022",
     role: "Leading Multi-Million Dollar Donor-Funded Programs (World Bank & AfDB)",
     company: "Kenya National Highways Authority",
     title: "Leading Strategic Transformation",
